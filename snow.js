@@ -1,15 +1,18 @@
 class snowPrincess {
     constructor(x, y)
     {
-        pos_x = x;
-        pos_y = y;
+        this.position = new Vec2(x, y);
+        this.dwarfHp = 3; 
     }
 
     update(){
 
     }
 
-    draw(){
-        
+    draw(image_reference){
+        push();
+        imageMode(CENTER);
+        image(image_reference, this.position.x, this.position.y);
+        pop(); 
     }
 }
