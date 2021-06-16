@@ -23,7 +23,7 @@ function setup()
 {
     createCanvas( 600, windowHeight );
     redDwarf = new dwarf(width/2, 150, redDwarfImg);
-    blueDwarf = new dwarf(width/2 - 80, 150, blueDwarfImg);
+    blueDwarf = new Bluedwarf(width/2 - 80, 150, blueDwarfImg);
     screen = 0;
 }   
 
