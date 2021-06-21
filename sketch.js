@@ -3,6 +3,8 @@ let redDwarf;
 let redDwarfImg = [];
 let blueDwarf;
 let blueDwarfImg = [];
+let dwarfPaze;
+let dwarfPazeImg = [];
 let center;
 let snowImg = [];
 let snowprincess;
@@ -19,6 +21,9 @@ function preload(){
     blueDwarfImg.push(loadImage('DwarfImage/BlueDwarf1.png'));
     blueDwarfImg.push(loadImage('DwarfImage/BlueDwarf2.png'));
     blueDwarfImg.push(loadImage('DwarfImage/BlueDwarf3.png'));
+    dwarfPazeImg.push(loadImage('DwarfImage/Paze2BlueDwarf1.png'))
+    dwarfPazeImg.push(loadImage('DwarfImage/Paze2BlueDwarf2.png'))
+    dwarfPazeImg.push(loadImage('DwarfImage/Paze2BlueDwarf3.png'))
     snowImg.push(loadImage('DwarfImage/Whiteprincess.png'));
     titleImg.push(loadImage('DwarfImage/Title.png'));
 }
@@ -29,8 +34,9 @@ function setup()
     redDwarf = new dwarf(width/2, 150, redDwarfImg);
     blueDwarf = new Bluedwarf(width/2 - 80, 150, blueDwarfImg);
     snowprincess = new snowPrincess(width/2, height - 100, snowImg);
+    dwarfPaze = new dwarfPaze2(width/2 - 80, 150, dwarfPazeImg);
     title = new Title(width/2, 200, titleImg);
-    screen = 0;
+    screen = 4;
 }   
 
 function draw()
@@ -64,13 +70,17 @@ function draw()
         //게임 스토리 3~5
         case 3:
             check = 1;
+            imageMode(CENTER);
             redDwarf.update();
             blueDwarf.update();
             snowprincess.update();
             snowprincess.draw(snowImg[0]);
+            /*if(blueDwarf.dwarfHp = 3500){
+                screen = 4;
+            }*/
             break;
         case 4:
-
+            dwarfPaze.update();
             break;
         case 5:
             

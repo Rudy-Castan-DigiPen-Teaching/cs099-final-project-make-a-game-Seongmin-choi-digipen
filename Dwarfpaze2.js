@@ -1,12 +1,12 @@
-class Bluedwarf{
+class dwarfPaze2{
     constructor(x, y, imageAnimate){
         this.position = new Vec2(x, y);
-        this.velocity = new Vec2( -1.5, 0.5 );
+        this.velocity = new Vec2( -1, 0.25 );
         this.imageAnimate = imageAnimate;
         this.imageDeltaTime = 0;
         this.pattern = 0;
         this.patternCheck = 0;
-        this.dwarfHp = 7000; 
+        this.dwarfHp = 3500; 
         this.particle = [];
     }
 
@@ -27,12 +27,12 @@ class Bluedwarf{
 
     animateImg(){
         this.imageDeltaTime += deltaTime / 1000;
-        if(this.imageDeltaTime >= 7){
+        if(this.imageDeltaTime >= 6){
             image(this.imageAnimate[2], this.position.x, this.position.y);
             this.imageDeltaTime = 0;
             this.patternCheck = 0;
         }
-        else if(this.imageDeltaTime >= 2.5 && this.imageDeltaTime <= 7){
+        else if(this.imageDeltaTime >= 1.5 && this.imageDeltaTime <= 6){
             image(this.imageAnimate[2], this.position.x, this.position.y);
             if(this.patternCheck == 0){
                 this.pattern = floor(random(0));
@@ -40,6 +40,7 @@ class Bluedwarf{
             }   
                 switch(this.pattern){                        
                     case 0:
+
                         for(let i = 0; i < 20; ++i){
                             this.particle.push( new blueParticle( this.position.x, this.position.y ));
                             if ( this.particle[ i ].position.y > height )
@@ -64,7 +65,7 @@ class Bluedwarf{
                         break;
             }            
         }
-        else if(this.imageDeltaTime >= 2.25 && this.imageDeltaTime <= 2.5){
+        else if(this.imageDeltaTime >= 1.25 && this.imageDeltaTime <= 1.5){
             image(this.imageAnimate[1], this.position.x, this.position.y);
         }
         else{
@@ -75,13 +76,13 @@ class Bluedwarf{
     judgement(){
         
         if(this.position.x >= width - 40){
-            this.velocity = new Vec2( -1.5, 0 );
+            this.velocity = new Vec2( -1, 0 );
         }
         else if(this.position.x <= 0){
-            this.velocity = new Vec2( 1.5, -1 );
+            this.velocity = new Vec2( 1, -0.5 );
         }
         if(this.position.y <= 0){
-            this.velocity = new Vec2( 1.5, 1 );
+            this.velocity = new Vec2( 1, 0.5 );
         }
     }
 }
