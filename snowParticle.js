@@ -7,6 +7,7 @@ class snowParticle
         this.velocity = new Vec2( 0, 2 );
         this.velocity.setLength( 15 );
         this.velocity.setAngle( HALF_PI + PI );
+        this.isHit = false;
     }
 
     update()

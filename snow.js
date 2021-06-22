@@ -14,6 +14,7 @@ class snowPrincess
         this.control();
         this.bullet();
         this.hitBox();
+        this.movement();
     }
 
     draw( image_reference )
@@ -65,22 +66,22 @@ class snowPrincess
         console.log( this.Shoot.length );
     }
 
-    judgement()
+    movement()
     {
 
-        if ( this.position.x = 0 )
+        if ( this.position.x < 0 )
         {
             this.position.x = 0;
         }
-        else if ( this.position.x = width )
+        else if ( this.position.x > width )
         {
             this.position.x = width;
         }
-        if ( this.position.y = 0 )
+        if ( this.position.y < 0 )
         {
             this.position.y = 0
         }
-        else if(this.position.y = height)
+        else if(this.position.y > height)
         {
             this.position.y = height
         }

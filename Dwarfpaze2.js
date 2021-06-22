@@ -8,6 +8,9 @@ class dwarfPaze2{
         this.patternCheck = 0;
         this.dwarfHp = 3500; 
         this.particle = [];
+        this.particle1 = [];
+        this.particle2 = [];
+        this.particle3 = [];
     }
 
     update()
@@ -35,33 +38,68 @@ class dwarfPaze2{
         else if(this.imageDeltaTime >= 1.5 && this.imageDeltaTime <= 6){
             image(this.imageAnimate[2], this.position.x, this.position.y);
             if(this.patternCheck == 0){
-                this.pattern = floor(random(0));
+                this.pattern = floor(3);
                 this.patternCheck = 1;
             }   
                 switch(this.pattern){                        
                     case 0:
-
-                        for(let i = 0; i < 20; ++i){
-                            this.particle.push( new blueParticle( this.position.x, this.position.y ));
+                        for(let i = 0; i < 2; ++i){
+                            this.particle.push( new Paze2Particle( this.position.x + 55, this.position.y + 55 ));
                             if ( this.particle[ i ].position.y > height )
                             {
                             this.particle.splice( i, 1 );
                             }   
                         }
-                        for(let blueParticle of this.particle){
-                            blueParticle.update();
-                            blueParticle.draw();
+                        for(let Paze2Particle of this.particle){
+                            Paze2Particle.update();
+                            Paze2Particle.draw();
                         }
-                        console.log(0);
                         break;
                     case 1:
-                        console.log(1);
+                        for ( let i = 0; i < 2; ++i )
+                        {
+                            this.particle1.push( new Paze2Particle1( this.position.x + 55, this.position.y + 55 ) );
+                            if ( this.particle1[ i ].position.y > height )
+                            {
+                                this.particle1.splice( i, 1 );
+                            }
+                        }
+                        for ( let Paze2Particle1 of this.particle1 )
+                        {
+                            Paze2Particle1.update();
+                            Paze2Particle1.draw();
+                        }
                         break;
                     case 2:
-                        console.log(2);
+                        for ( let i = 0; i < 2; ++i )
+                        {
+                            this.particle2.push( new Paze2Particle2( this.position.x + 55, this.position.y + 55 ) );
+                            if ( this.particle2[ i ].position.y > height )
+                            {
+                                this.particle2.splice( i, 1 );
+                            }
+                            else if(this.particle2[ i ].position.x > width )
+                            {
+                                this.particle2.splice( i, 1 );
+                            }
+                            else if(this.particle2[ i ].position.x < 0 )
+                            {
+                                this.particle2.splice( i, 1 );
+                            }
+                        }
+                        for ( let Paze2Particle2 of this.particle2 )
+                        {
+                            Paze2Particle2.update();
+                            Paze2Particle2.draw();
+                        }
                         break;
                     case 3:
-                        console.log(3);
+                        this.particle3.push( new Paze2Particle3( this.position.x + 55, this.position.y + 55 ) );
+                        for ( let Paze2Particle3 of this.particle3 )
+                        {
+                            Paze2Particle3.update();
+                            Paze2Particle3.draw();
+                        }
                         break;
             }            
         }
