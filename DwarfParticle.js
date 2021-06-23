@@ -25,7 +25,7 @@ class blueParticle1
     constructor( x, y )
     {
         this.position = new Vec2( x, y );
-        this.velocity = new Vec2( 0, -0.25 );
+        this.velocity = new Vec2( 0, -0.5 );
         this.velocity.setLength( 50 );
         this.velocity.setAngle( HALF_PI );
     }
@@ -46,13 +46,13 @@ class blueParticle1
     }
 }
 
-class Paze2Particle
+class Phase2Particle
 {
     constructor( x, y )
     {
         this.position = new Vec2( x, y );
         this.velocity = new Vec2( 0, -2 );
-        this.velocity.setLength( 100 );
+        this.velocity.setLength( 30 );
         this.velocity.setAngle( HALF_PI );
         this.isHit = false;
     }
@@ -68,13 +68,13 @@ class Paze2Particle
     }
 }
 
-class Paze2Particle1{
+class Phase2Particle1{
 
     constructor( x, y )
     {
         this.position = new Vec2( x, y );
-        this.velocity = new Vec2( 0, -0.25 );
-        this.velocity.setLength( 50 );
+        this.velocity = new Vec2( 0, -1 );
+        this.velocity.setLength( 20 );
         this.velocity.setAngle( HALF_PI );
     }
 
@@ -97,12 +97,12 @@ class Paze2Particle1{
     } 
 }
 
-class Paze2Particle2
+class Phase2Particle2
 {
     constructor( x, y )
     {
         this.position = new Vec2( x, y );
-        this.x = random(0, 900);
+        this.x = random(0, 550);
         this.velocity = new Vec2( 0.5, 0 );
         this.velocity.setLength( 4 );
         this.velocity.setAngle( HALF_PI );
@@ -120,13 +120,13 @@ class Paze2Particle2
 
 }
 
-class Paze2Particle3
+class Phase2Particle3
 {
     constructor( x, y )
     {
         this.position = new Vec2( x, y );
-        this.velocity = new Vec2( 0, -0.25 );
-        this.velocity.setLength( 200 );
+        this.velocity = new Vec2( 0, -0.001 );
+        this.velocity.setLength( 30 );
         this.velocity.setAngle( HALF_PI );
     }
 

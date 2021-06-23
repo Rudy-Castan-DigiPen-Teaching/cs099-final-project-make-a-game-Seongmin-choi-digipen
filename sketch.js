@@ -3,8 +3,8 @@ let redDwarf;
 let redDwarfImg = [];
 let blueDwarf;
 let blueDwarfImg = [];
-let dwarfPaze;
-let dwarfPazeImg = [];
+let dwarfPhase;
+let dwarfPhaseImg = [];
 let center;
 let snowImg = [];
 let snowprincess;
@@ -21,9 +21,9 @@ function preload(){
     blueDwarfImg.push(loadImage('DwarfImage/BlueDwarf1.png'));
     blueDwarfImg.push(loadImage('DwarfImage/BlueDwarf2.png'));
     blueDwarfImg.push(loadImage('DwarfImage/BlueDwarf3.png'));
-    dwarfPazeImg.push(loadImage('DwarfImage/Paze2BlueDwarf1.png'))
-    dwarfPazeImg.push(loadImage('DwarfImage/Paze2BlueDwarf2.png'))
-    dwarfPazeImg.push(loadImage('DwarfImage/Paze2BlueDwarf3.png'))
+    dwarfPhaseImg.push(loadImage('DwarfImage/Paze2BlueDwarf1.png'))
+    dwarfPhaseImg.push(loadImage('DwarfImage/Paze2BlueDwarf2.png'))
+    dwarfPhaseImg.push(loadImage('DwarfImage/Paze2BlueDwarf3.png'))
     snowImg.push(loadImage('DwarfImage/Whiteprincess.png'));
     titleImg.push(loadImage('DwarfImage/Title.png'));
 }
@@ -34,7 +34,7 @@ function setup()
     redDwarf = new dwarf(width/2, 150, redDwarfImg);
     blueDwarf = new Bluedwarf(width/2 - 80, 150, blueDwarfImg);
     snowprincess = new snowPrincess(width/2, height - 100, snowImg);
-    dwarfPaze = new dwarfPaze2(width/2 - 80, 150, dwarfPazeImg);
+    dwarfPhase = new dwarfPhase2(width/2 - 80, 150, dwarfPhaseImg);
     title = new Title(width/2, 200, titleImg);
     screen = 4;
 }   
@@ -48,6 +48,10 @@ function draw()
             rectMode(CENTER);
             rect(width/2, height/2 + 130, 300, 50);
             rect(width/2, height/2 + 200, 300, 50);
+            textSize(20);
+            textStyle(BOLD);
+            text("START && How to Play", width/2 - 110, height/2 + 135);
+            text("CREDITS", width/2 - 40, height/2 + 205);
             check = 1;
             if(mouse_screen == 2){
                 mouse_screen = 0;
@@ -73,6 +77,7 @@ function draw()
             imageMode(CENTER);
             redDwarf.update();
             blueDwarf.update();
+            blueDwarf.particleDraw();
             snowprincess.update();
             snowprincess.draw(snowImg[0]);
             /*if(blueDwarf.dwarfHp = 3500){
@@ -80,7 +85,11 @@ function draw()
             }*/
             break;
         case 4:
-            dwarfPaze.update();
+            check = 1;
+            dwarfPhase.update();
+            dwarfPhase.particleDraw();
+            snowprincess.update();
+            snowprincess.draw(snowImg[0]);
             break;
         case 5:
             

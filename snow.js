@@ -7,14 +7,16 @@ class snowPrincess
         this.imageAnimate = imageAnimate;
         this.Shoot = [];
         this.bulletTime = 0;
+        this.isHit = false;
+        this.hitboxR = 20;
     }
 
     update()
     {
         this.control();
         this.bullet();
-        this.hitBox();
         this.movement();
+        this.hitBox();
     }
 
     draw( image_reference )
@@ -88,6 +90,6 @@ class snowPrincess
     }
 
     hitBox(){
-
+        circle(this.position.x, this.position.y, this.hitboxR);
     }
 }

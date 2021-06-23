@@ -12,6 +12,7 @@ class Bluedwarf
         this.particle = [];
         this.particle1 = [];
         this.isHit = false;
+        this.patternDeltaTime = 0;
     }
 
     update()
@@ -45,40 +46,23 @@ class Bluedwarf
             image( this.imageAnimate[ 2 ], this.position.x, this.position.y );
             if ( this.patternCheck == 0 )
             {
-                this.pattern = floor( random( 0,2 ) );
+                this.pattern = floor( random(0, 2) );
                 this.patternCheck = 1;
             }
+            this.patternDeltaTime += deltaTime / 1000;
             switch ( this.pattern )
             {
             case 0:
-                for ( let i = 0; i < 1; ++i )
-                {
-                    this.particle.push( new blueParticle( this.position.x + 10, this.position.y + 20 ) );
-                    if ( this.particle[ i ].position.y > height )
-                    {
-                        this.particle.splice( i, 1 );
+                if(this.patternDeltaTime > 0){
+                    this.particle.push( new blueParticle( this.position.x + 10, this.position.y + 20 ));
+                    this.patternDeltaTime = 0;
                     }
-                }
-                for ( let blueParticle of this.particle )
-                {
-                    blueParticle.update();
-                    blueParticle.draw();
-                }
-                break;
+                    break;
             case 1:
-                for ( let i = 0; i < 1; ++i )
-                {
-                    this.particle1.push( new blueParticle1( this.position.x + 10, this.position.y + 20 ) );
-                    if ( this.particle1[ i ].position.y > height )
-                    {
-                        this.particle1.splice( i, 3 );
-                    }
-                }
-                for ( let blueParticle1 of this.particle1 )
-                {
-                    blueParticle1.update();
-                    blueParticle1.draw();
-                }
+                if(this.patternDeltaTime > 0.25){
+                    this.particle1.push( new blueParticle1( this.position.x + 55, this.position.y + 55 ) );
+                    this.patternDeltaTime = 0;
+                }   
                 break;
             }
         }
@@ -91,6 +75,28 @@ class Bluedwarf
             image( this.imageAnimate[ 0 ], this.position.x, this.position.y );
         }
 
+    }
+
+    particleDraw(){
+        for ( let i = 0; i < this.particle.length; i++ )
+        {   
+            this.particle[ i ].update();
+            this.particle[ i ].draw();
+
+            if(this.particle[ i ].position.y > height){
+                this.particle.splice( i , 1 );
+            }
+        }
+
+        for ( let i = 0; i < this.particle1.length; i++ )
+        {   
+            this.particle1[ i ].update();
+            this.particle1[ i ].draw();
+
+            if(this.particle1[ i ].position.y > height){
+                this.particle1.splice( i , 1 );
+            }
+        }
     }
 
     judgement()
@@ -108,5 +114,9 @@ class Bluedwarf
         {
             this.velocity = new Vec2( 1.5, 1 );
         }
+    }
+
+    hitBox(){
+        t
     }
 }
