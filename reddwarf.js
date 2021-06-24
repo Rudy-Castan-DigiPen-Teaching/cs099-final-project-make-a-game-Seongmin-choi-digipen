@@ -6,6 +6,9 @@ class dwarf{
         this.imageDeltaTime = 0;
         this.pattern = 0;
         this.patternCheck = 0;
+        this.particle = [];
+        this.particle1 = [];
+        this.patternDeltaTime = 0;
     }
 
     update()
@@ -33,23 +36,53 @@ class dwarf{
         else if(this.imageDeltaTime >= 2 && this.imageDeltaTime <= 7){
             image(this.imageAnimate[2], this.position.x, this.position.y);
             if(this.patternCheck == 0){
-                this.pattern = floor(random(0,4));
+                this.pattern = floor(random(0,2));
                 this.patternCheck = 1;
             }
-                switch(this.pattern){
-                    case 0:
-                        console.log(0);
-                        break;
-                    case 1:
-                        console.log(1);
-                        break;                
-            }                        
+            this.patternDeltaTime += deltaTime / 1000;
+            switch ( this.pattern )
+            {
+            case 0:
+                if(this.patternDeltaTime > 0){
+                    this.particle.push( new blueParticle1( this.position.x + 20, this.position.y + 55 ));
+                    this.patternDeltaTime = 0;
+                }
+                break;
+            case 1:
+                if(this.patternDeltaTime > 0.25){
+                    this.particle1.push( new blueParticle( this.position.x, this.position.y + 55 ) );
+                    this.patternDeltaTime = 0;
+                }   
+                break;
+            }   
         }
         else if(this.imageDeltaTime >= 1.75 && this.imageDeltaTime <= 2){
             image(this.imageAnimate[1], this.position.x, this.position.y);
         }
         else{
             image(this.imageAnimate[0], this.position.x, this.position.y);
+        }
+    }
+
+    particleDraw(){
+        for ( let i = 0; i < this.particle.length; i++ )
+        {   
+            this.particle[ i ].update();
+            this.particle[ i ].draw();
+
+            if(this.particle[ i ].position.y > height){
+                this.particle.splice( i , 1 );
+            }
+        }
+
+        for ( let i = 0; i < this.particle1.length; i++ )
+        {   
+            this.particle1[ i ].update();
+            this.particle1[ i ].draw();
+
+            if(this.particle1[ i ].position.y > height){
+                this.particle1.splice( i , 1 );
+            }
         }
     }
 

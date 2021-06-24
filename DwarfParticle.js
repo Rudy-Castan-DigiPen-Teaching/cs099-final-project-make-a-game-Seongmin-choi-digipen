@@ -7,6 +7,7 @@ class blueParticle
         this.velocity.setLength( 30 );
         this.velocity.setAngle( HALF_PI );
         this.isHit = false;
+        this.hitBoxR = 15
     }
 
     update()
@@ -16,7 +17,7 @@ class blueParticle
 
     draw()
     {
-        circle( this.position.x, this.position.y, 15 );
+        circle( this.position.x, this.position.y, this.hitBoxR );
     }
 }
 
@@ -28,6 +29,8 @@ class blueParticle1
         this.velocity = new Vec2( 0, -0.5 );
         this.velocity.setLength( 50 );
         this.velocity.setAngle( HALF_PI );
+        this.isHit = false;
+        this.hitBoxR = 15
     }
 
     update()
@@ -37,11 +40,11 @@ class blueParticle1
 
     draw()
     {
-        circle( this.position.x, this.position.y, 15 );
-        circle( this.position.x - 20, this.position.y - 20, 15 );
-        circle( this.position.x - 40, this.position.y - 40, 15 );
-        circle( this.position.x + 20, this.position.y - 20, 15 );
-        circle( this.position.x + 40, this.position.y - 40, 15 );
+        circle( this.position.x, this.position.y, this.hitBoxR );
+        circle( this.position.x - 20, this.position.y - 20, this.hitBoxR );
+        circle( this.position.x - 40, this.position.y - 40, this.hitBoxR );
+        circle( this.position.x + 20, this.position.y - 20, this.hitBoxR );
+        circle( this.position.x + 40, this.position.y - 40, this.hitBoxR );
 
     }
 }
@@ -55,6 +58,7 @@ class Phase2Particle
         this.velocity.setLength( 30 );
         this.velocity.setAngle( HALF_PI );
         this.isHit = false;
+        this.hitBoxR = 60
     }
 
     update()
@@ -64,7 +68,7 @@ class Phase2Particle
 
     draw()
     {
-        circle( this.position.x, this.position.y, 60 );
+        circle( this.position.x, this.position.y, this.hitBoxR );
     }
 }
 
@@ -76,6 +80,8 @@ class Phase2Particle1{
         this.velocity = new Vec2( 0, -1 );
         this.velocity.setLength( 20 );
         this.velocity.setAngle( HALF_PI );
+        this.hitBoxR = 15;
+        this.isHit = false;
     }
 
     update()
@@ -85,15 +91,15 @@ class Phase2Particle1{
 
     draw()
     {
-        circle( this.position.x, this.position.y, 15 );
-        circle( this.position.x - 20, this.position.y - 20, 15 );
-        circle( this.position.x - 40, this.position.y - 40, 15 );
-        circle( this.position.x + 20, this.position.y - 20, 15 );
-        circle( this.position.x + 40, this.position.y - 40, 15 );
-        circle( this.position.x + 60, this.position.y - 60, 15 );
-        circle( this.position.x - 60, this.position.y - 60, 15 );
-        circle( this.position.x + 80, this.position.y - 60, 15 );
-        circle( this.position.x - 80, this.position.y - 60, 15 );
+        circle( this.position.x, this.position.y, this.hitBoxR );
+        circle( this.position.x - 20, this.position.y - 20, this.hitBoxR );
+        circle( this.position.x - 40, this.position.y - 40, this.hitBoxR );
+        circle( this.position.x + 20, this.position.y - 20, this.hitBoxR );
+        circle( this.position.x + 40, this.position.y - 40, this.hitBoxR );
+        circle( this.position.x + 60, this.position.y - 60, this.hitBoxR );
+        circle( this.position.x - 60, this.position.y - 60, this.hitBoxR );
+        circle( this.position.x + 80, this.position.y - 60, this.hitBoxR );
+        circle( this.position.x - 80, this.position.y - 60, this.hitBoxR );
     } 
 }
 
@@ -106,6 +112,8 @@ class Phase2Particle2
         this.velocity = new Vec2( 0.5, 0 );
         this.velocity.setLength( 4 );
         this.velocity.setAngle( HALF_PI );
+        this.hitBoxR = 15;
+        this.isHit = false;
     }
 
     update()
@@ -115,7 +123,7 @@ class Phase2Particle2
 
     draw()
     {
-        circle( this.x, this.position.y, 15 );
+        circle( this.x, this.position.y, this.hitBoxR );
     }
 
 }
@@ -128,6 +136,9 @@ class Phase2Particle3
         this.velocity = new Vec2( 0, -0.001 );
         this.velocity.setLength( 30 );
         this.velocity.setAngle( HALF_PI );
+        this.hitBoxR1 = 20;
+        this.hitBoxR2 = 500;
+        this.isHit = false;
     }
 
     update()
@@ -138,12 +149,12 @@ class Phase2Particle3
 
     draw()
     {
-        circle( this.position.x, this.position.y, 20 );
+        circle( this.position.x, this.position.y, this.hitBoxR1 );
     }
 
     boom(){
         if(this.position.y > height){
-            circle(this.position.x, windowHeight, 500);
+            circle(this.position.x, windowHeight, this.hitBoxR2);
         }
     }
 }

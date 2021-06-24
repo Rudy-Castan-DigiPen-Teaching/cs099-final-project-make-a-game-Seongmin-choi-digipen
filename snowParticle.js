@@ -8,6 +8,7 @@ class snowParticle
         this.velocity.setLength( 15 );
         this.velocity.setAngle( HALF_PI + PI );
         this.isHit = false;
+        this.hitBoxR = 15;
     }
 
     update()
@@ -17,6 +18,6 @@ class snowParticle
 
     draw()
     {
-        circle( this.position.x, this.position.y, 15 );
+        circle( this.position.x, this.position.y, this.hitBoxR );
     }
 }

@@ -8,7 +8,7 @@ class snowPrincess
         this.Shoot = [];
         this.bulletTime = 0;
         this.isHit = false;
-        this.hitboxR = 20;
+        this.hitBoxR = 20;
     }
 
     update()
@@ -65,7 +65,6 @@ class snowPrincess
         {
             this.Shoot.push( new snowParticle( this.position.x, this.position.y ) );
         }
-        console.log( this.Shoot.length );
     }
 
     movement()
@@ -90,6 +89,9 @@ class snowPrincess
     }
 
     hitBox(){
-        circle(this.position.x, this.position.y, this.hitboxR);
+        circle(this.position.x + 30, this.position.y + 30, this.hitBoxR);
     }
+
+    
 }
+

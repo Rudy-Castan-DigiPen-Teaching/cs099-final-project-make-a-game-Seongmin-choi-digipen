@@ -8,10 +8,11 @@ class Bluedwarf
         this.imageDeltaTime = 0;
         this.pattern = 0;
         this.patternCheck = 0;
-        this.dwarfHp = 7000;
+        this.dwarfHp = 10500;
         this.particle = [];
         this.particle1 = [];
         this.isHit = false;
+        this.hitBoxR = 40;
         this.patternDeltaTime = 0;
     }
 
@@ -20,6 +21,7 @@ class Bluedwarf
         this.position.addTo( this.velocity );
         this.animateImg();
         this.judgement();
+        this.hitBox();
     }
 
 
@@ -54,7 +56,7 @@ class Bluedwarf
             {
             case 0:
                 if(this.patternDeltaTime > 0){
-                    this.particle.push( new blueParticle( this.position.x + 10, this.position.y + 20 ));
+                    this.particle.push( new blueParticle( this.position.x + 55, this.position.y + 55 ));
                     this.patternDeltaTime = 0;
                     }
                     break;
@@ -117,6 +119,6 @@ class Bluedwarf
     }
 
     hitBox(){
-        t
+        circle(this.position.x + 40, this.position.y + 35, this.hitBoxR);
     }
 }
