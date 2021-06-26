@@ -16,18 +16,18 @@ I made these with *Pixel Studio for pixel art*.
 
 Got Music, Background Image from
 ================================
- Background Image : background.png    
- https://www.gamedevmarket.net/asset/forest-landscapes/
+    Background Image : background.png    
+https://www.gamedevmarket.net/asset/forest-landscapes/
 
- Background Music : LEGACY - A Slave To No One MP3.mp3, 
- LEGACY - Heated Lands MP3.mp3, 
- LEGACY - Thoughts MP3.mp3, 
- LEGACY - Can not Stop Winning MP3.mp3   
- https://www.gamedevmarket.net/asset/rpg-orchestral-essentials-free-sample/
+    Background Music : LEGACY - A Slave To No One MP3.mp3, 
+    LEGACY - Heated Lands MP3.mp3, 
+    LEGACY - Thoughts MP3.mp3, 
+    LEGACY - Can not Stop Winning MP3.mp3   
+https://www.gamedevmarket.net/asset/rpg-orchestral-essentials-free-sample/
 
 and their licence
 =================
-    https://www.gamedevmarket.net/terms-conditions/#pro-licence
+https://www.gamedevmarket.net/terms-conditions/#pro-licence
 
     4.  LICENCE (A) – For purchases made after 00:00 (GMT) on 15th January 2019
 
