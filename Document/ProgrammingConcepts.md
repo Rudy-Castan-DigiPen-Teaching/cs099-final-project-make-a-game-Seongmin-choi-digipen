@@ -13,9 +13,10 @@ There are some Example what I used
         How to play Box
         Credit Box
 
-2. Colors
-=========
+Colors
+======
 There are some Example what I used
+----------------------------------
     -Dwarf Particle
         R   G   B
              
