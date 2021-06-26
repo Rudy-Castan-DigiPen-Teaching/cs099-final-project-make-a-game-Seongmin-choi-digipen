@@ -1,3 +1,8 @@
+// Name       : Seongmin-Choi
+// Assignment : final_project-make_a_game
+// Course     : CS099
+// Spring 2021
+
 class snowParticle
 {
 

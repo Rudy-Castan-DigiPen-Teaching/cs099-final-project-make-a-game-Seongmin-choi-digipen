@@ -1,3 +1,8 @@
+// Name       : Seongmin-Choi
+// Assignment : final_project-make_a_game
+// Course     : CS099
+// Spring 2021
+
 class blueParticle
 {
     constructor( x, y )
@@ -17,7 +22,10 @@ class blueParticle
 
     draw()
     {
+        push()
+        fill( 255, 0, 0 );
         circle( this.position.x, this.position.y, this.hitBoxR );
+        pop()
     }
 }
 
@@ -40,7 +48,10 @@ class blueParticle1
 
     draw()
     {
+        push()
+        fill( 255, 0, 0 );
         circle( this.position.x, this.position.y, this.hitBoxR );
+        pop()
     }
 }
 
@@ -63,11 +74,15 @@ class Phase2Particle
 
     draw()
     {
+        push()
+        fill( 255, 0, 0 );
         circle( this.position.x, this.position.y, this.hitBoxR );
+        pop()
     }
 }
 
-class Phase2Particle1{
+class Phase2Particle1
+{
 
     constructor( x, y )
     {
@@ -86,15 +101,18 @@ class Phase2Particle1{
 
     draw()
     {
+        push()
+        fill( 255, 0, 0 );
         circle( this.position.x, this.position.y, this.hitBoxR );
-    } 
+        pop()
+    }
 }
 
 class Phase2Particle2
 {
     constructor( y )
     {
-        this.position = new Vec2( random(550), y );
+        this.position = new Vec2( random( 550 ), y );
         this.velocity = new Vec2( 0.5, 0 );
         this.velocity.setLength( 4 );
         this.velocity.setAngle( HALF_PI );
@@ -109,7 +127,10 @@ class Phase2Particle2
 
     draw()
     {
+        push()
+        fill( 255, 0, 0 );
         circle( this.position.x, this.position.y, this.hitBoxR );
+        pop()
     }
 
 }

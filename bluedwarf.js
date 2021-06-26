@@ -1,5 +1,5 @@
-// Name       : S.Choi
-// Assignment : final_project_make_a_game
+// Name       : Seongmin-Choi
+// Assignment : final_project-make_a_game
 // Course     : CS099
 // Spring 2021
 
@@ -53,27 +53,29 @@ class Bluedwarf
             image( this.imageAnimate[ 2 ], this.position.x, this.position.y );
             if ( this.patternCheck == 0 )
             {
-                this.pattern = floor( random(0, 2) );
+                this.pattern = floor( random( 0, 2 ) );
                 this.patternCheck = 1;
             }
             this.patternDeltaTime += deltaTime / 1000;
             switch ( this.pattern )
             {
             case 0:
-                if(this.patternDeltaTime > 0){
-                    this.particle.push( new blueParticle( this.position.x + 55, this.position.y + 55 ));
+                if ( this.patternDeltaTime > 0 )
+                {
+                    this.particle.push( new blueParticle( this.position.x + 55, this.position.y + 55 ) );
                     this.patternDeltaTime = 0;
-                    }
-                    break;
+                }
+                break;
             case 1:
-                if(this.patternDeltaTime > 0.25){
+                if ( this.patternDeltaTime > 0.25 )
+                {
                     this.particle1.push( new blueParticle1( this.position.x + 55, this.position.y + 55 ) );
-                    this.particle1.push( new blueParticle1( this.position.x + 75, this.position.y + 35));
-                    this.particle1.push( new blueParticle1( this.position.x + 95, this.position.y + 15));
-                    this.particle1.push( new blueParticle1( this.position.x + 35, this.position.y + 35));
-                    this.particle1.push( new blueParticle1( this.position.x + 15, this.position.y + 15));
+                    this.particle1.push( new blueParticle1( this.position.x + 75, this.position.y + 35 ) );
+                    this.particle1.push( new blueParticle1( this.position.x + 95, this.position.y + 15 ) );
+                    this.particle1.push( new blueParticle1( this.position.x + 35, this.position.y + 35 ) );
+                    this.particle1.push( new blueParticle1( this.position.x + 15, this.position.y + 15 ) );
                     this.patternDeltaTime = 0;
-                }   
+                }
                 break;
             }
         }
@@ -88,24 +90,27 @@ class Bluedwarf
 
     }
 
-    particleDraw(){
+    particleDraw()
+    {
         for ( let i = 0; i < this.particle.length; i++ )
-        {   
+        {
             this.particle[ i ].update();
             this.particle[ i ].draw();
 
-            if(this.particle[ i ].position.y > height){
-                this.particle.splice( i , 1 );
+            if ( this.particle[ i ].position.y > height )
+            {
+                this.particle.splice( i, 1 );
             }
         }
 
         for ( let i = 0; i < this.particle1.length; i++ )
-        {   
+        {
             this.particle1[ i ].update();
             this.particle1[ i ].draw();
 
-            if(this.particle1[ i ].position.y > height){
-                this.particle1.splice( i , 1 );
+            if ( this.particle1[ i ].position.y > height )
+            {
+                this.particle1.splice( i, 1 );
             }
         }
     }
@@ -127,11 +132,12 @@ class Bluedwarf
         }
     }
 
-    hitBox(){
+    hitBox()
+    {
         push()
         noFill();
         noStroke();
-        circle(this.position.x + 40, this.position.y + 35, this.hitBoxR);
+        circle( this.position.x + 40, this.position.y + 35, this.hitBoxR );
         pop();
     }
 }

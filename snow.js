@@ -1,3 +1,8 @@
+// Name       : Seongmin-Choi
+// Assignment : final_project-make_a_game
+// Course     : CS099
+// Spring 2021
+
 class snowPrincess
 {
     constructor( x, y, imageAnimate )
@@ -82,15 +87,15 @@ class snowPrincess
         {
             this.position.y = 0
         }
-        else if(this.position.y > height)
+        else if ( this.position.y > height )
         {
             this.position.y = height
         }
     }
 
-    hitBox(){
-        circle(this.position.x, this.position.y, this.hitBoxR);
+    hitBox()
+    {
+        circle( this.position.x, this.position.y, this.hitBoxR );
     }
 
 }
-
