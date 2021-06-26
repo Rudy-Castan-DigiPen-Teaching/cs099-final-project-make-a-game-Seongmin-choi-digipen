@@ -89,9 +89,8 @@ class snowPrincess
     }
 
     hitBox(){
-        circle(this.position.x + 30, this.position.y + 30, this.hitBoxR);
+        circle(this.position.x, this.position.y, this.hitBoxR);
     }
 
-    
 }
 

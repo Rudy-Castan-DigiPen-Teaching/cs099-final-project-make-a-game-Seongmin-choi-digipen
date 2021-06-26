@@ -44,7 +44,7 @@ class dwarf{
             {
             case 0:
                 if(this.patternDeltaTime > 0){
-                    this.particle.push( new blueParticle1( this.position.x + 20, this.position.y + 55 ));
+                    this.particle.push( new blueParticle( this.position.x + 20, this.position.y + 55 ));
                     this.patternDeltaTime = 0;
                 }
                 break;

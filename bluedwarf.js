@@ -8,7 +8,7 @@ class Bluedwarf
         this.imageDeltaTime = 0;
         this.pattern = 0;
         this.patternCheck = 0;
-        this.dwarfHp = 10500;
+        this.dwarfHp = 5000;
         this.particle = [];
         this.particle1 = [];
         this.isHit = false;
@@ -63,6 +63,10 @@ class Bluedwarf
             case 1:
                 if(this.patternDeltaTime > 0.25){
                     this.particle1.push( new blueParticle1( this.position.x + 55, this.position.y + 55 ) );
+                    this.particle1.push( new blueParticle1( this.position.x + 75, this.position.y + 35));
+                    this.particle1.push( new blueParticle1( this.position.x + 95, this.position.y + 15));
+                    this.particle1.push( new blueParticle1( this.position.x + 35, this.position.y + 35));
+                    this.particle1.push( new blueParticle1( this.position.x + 15, this.position.y + 15));
                     this.patternDeltaTime = 0;
                 }   
                 break;
@@ -119,6 +123,10 @@ class Bluedwarf
     }
 
     hitBox(){
+        push()
+        noFill();
+        noStroke();
         circle(this.position.x + 40, this.position.y + 35, this.hitBoxR);
+        pop();
     }
 }

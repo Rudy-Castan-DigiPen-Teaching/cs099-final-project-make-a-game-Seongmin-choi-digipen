@@ -1,9 +1,27 @@
-Planet Image : moon.png, planet.png, satellite.png, sun.png
+Except for the background image, the other image are...
+=======================================================
+ # BlueDwarf1.png
+BlueDwarf2.png
+ BlueDwarf3.png
+ Phase2BlueDwarf1.png
+ Phase2BlueDwarf2.png
+ Phase2BlueDwarf3.png
+ RedDwarf1.png
+ RedDwarf2.png
+ RedDwarf3.png
+ Title.png
+ Whiteprincess.png
 I made these with Pixel Studio.
 
-Background Image : 9.png 
+Background Image : background.png
+
+Background Music : LEGACY - A Slave To No One MP3.mp3, LEGACY - Heated Lands MP3.mp3, LEGACY - Thoughts MP3.mp3, LEGACY - Can not Stop Winning MP3.mp3
+
 Got that from
-https://www.gamedevmarket.net/asset/2d-space-background-expansion-2650/
+https://www.gamedevmarket.net/asset/forest-landscapes/
+
+https://www.gamedevmarket.net/asset/rpg-orchestral-essentials-free-sample/
+
 https://www.gamedevmarket.net/terms-conditions/#pro-licence
 4.  LICENCE (A) – For purchases made after 00:00 (GMT) on 15th January 2019
 

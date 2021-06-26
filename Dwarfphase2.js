@@ -6,12 +6,14 @@ class dwarfPhase2{
         this.imageDeltaTime = 0;
         this.pattern = 0;
         this.patternCheck = 0;
-        this.dwarfHp = 3500; 
+        this.dwarfHp = 5000; 
         this.particle = [];
         this.particle1 = [];
         this.particle2 = [];
         this.particle3 = [];
         this.patternDeltaTime = 0;
+        this.isHit = false;
+        this.hitBoxR = 45;
     }
 
     update()
@@ -19,6 +21,7 @@ class dwarfPhase2{
         this.position.addTo( this.velocity );
         this.animateImg();
         this.judgement();
+        this.hitBox();
     }
 
 
@@ -54,20 +57,22 @@ class dwarfPhase2{
                     case 1:
                         if(this.patternDeltaTime > 0.25){
                             this.particle1.push( new Phase2Particle1( this.position.x + 55, this.position.y + 55 ) );
+                            this.particle1.push( new Phase2Particle1( this.position.x + 75, this.position.y + 35 ) );
+                            this.particle1.push( new Phase2Particle1( this.position.x + 35, this.position.y + 35 ) );
+                            this.particle1.push( new Phase2Particle1( this.position.x + 15, this.position.y + 15 ) );
+                            this.particle1.push( new Phase2Particle1( this.position.x + 95, this.position.y + 15 ) );
+                            this.particle1.push( new Phase2Particle1( this.position.x + 115, this.position.y + 15 ) );
+                            this.particle1.push( new Phase2Particle1( this.position.x - 5, this.position.y + 15 ) );
+                            this.particle1.push( new Phase2Particle1( this.position.x + 135, this.position.y + 15 ) );
+                            this.particle1.push( new Phase2Particle1( this.position.x - 25, this.position.y + 15 ) );
                             this.patternDeltaTime = 0;
                         }   
                         break;
                     case 2:
                         if(this.patternDeltaTime > 0){
-                            this.particle2.push( new Phase2Particle2( this.position.x + 55, this.position.y + 55 ) );
+                            this.particle2.push( new Phase2Particle2( this.position.y + 55 ) );
                             this.patternDeltaTime = 0;
                         }
-                        break;
-                    case 3:
-                        if(this.patternDeltaTime > 2){
-                            this.particle3.push( new Phase2Particle3( this.position.x + 55, this.position.y + 55 ) );
-                            this.patternDeltaTime = 0;
-                        }   
                         break;
             }            
         }
@@ -117,14 +122,7 @@ class dwarfPhase2{
                 this.particle2.splice( i, 1 );
             }
         }
-        
-        for ( let i = 0; i < this.particle3.length; i++ )
-        {   
-            this.particle3[ i ].update();
-            this.particle3[ i ].draw();
-        }
-    }
-
+     }
     judgement(){
         
         if(this.position.x >= width - 40){
@@ -136,5 +134,13 @@ class dwarfPhase2{
         if(this.position.y <= 0){
             this.velocity = new Vec2( 1, 0.5 );
         }
+    }
+
+    hitBox(){
+        push()
+        noStroke();
+        noFill();
+        circle(this.position.x + 40, this.position.y + 35, this.hitBoxR);
+        pop()
     }
 }
