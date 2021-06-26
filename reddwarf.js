@@ -15,7 +15,7 @@ class dwarf{
     {
         this.position.addTo( this.velocity );
         this.animateImg();
-        this.judgement();
+        this.collision();
     }
 
 
@@ -86,7 +86,7 @@ class dwarf{
         }
     }
 
-    judgement(){
+    collision(){
         
         if(this.position.x >= width - 40){
             this.velocity = new Vec2( -1.5, 0 );

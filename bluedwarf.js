@@ -1,3 +1,8 @@
+// Name       : S.Choi
+// Assignment : final_project_make_a_game
+// Course     : CS099
+// Spring 2021
+
 class Bluedwarf
 {
     constructor( x, y, imageAnimate )
@@ -20,7 +25,7 @@ class Bluedwarf
     {
         this.position.addTo( this.velocity );
         this.animateImg();
-        this.judgement();
+        this.collision();
         this.hitBox();
     }
 
@@ -105,7 +110,7 @@ class Bluedwarf
         }
     }
 
-    judgement()
+    collision()
     {
 
         if ( this.position.x >= width - 40 )

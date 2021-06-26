@@ -15,7 +15,7 @@ class snowPrincess
     {
         this.control();
         this.bullet();
-        this.movement();
+        this.collision();
         this.hitBox();
     }
 
@@ -67,7 +67,7 @@ class snowPrincess
         }
     }
 
-    movement()
+    collision()
     {
 
         if ( this.position.x < 0 )

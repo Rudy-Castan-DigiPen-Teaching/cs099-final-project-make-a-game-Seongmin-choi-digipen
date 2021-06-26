@@ -20,7 +20,7 @@ class dwarfPhase2{
     {
         this.position.addTo( this.velocity );
         this.animateImg();
-        this.judgement();
+        this.collision();
         this.hitBox();
     }
 
@@ -123,7 +123,7 @@ class dwarfPhase2{
             }
         }
      }
-    judgement(){
+    collision(){
         
         if(this.position.x >= width - 40){
             this.velocity = new Vec2( -1, 0 );

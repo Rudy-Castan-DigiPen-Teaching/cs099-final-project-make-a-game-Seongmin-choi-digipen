@@ -1,16 +1,17 @@
 Except for the background image, the other image are...
 =======================================================
- # BlueDwarf1.png
- BlueDwarf2.png
- BlueDwarf3.png
- Phase2BlueDwarf1.png
- Phase2BlueDwarf2.png
- Phase2BlueDwarf3.png
- RedDwarf1.png
- RedDwarf2.png
- RedDwarf3.png
- Title.png
- Whiteprincess.png
+    1. BlueDwarf1.png
+    2. BlueDwarf2.png
+    3. BlueDwarf3.png
+    4. Phase2BlueDwarf1.png
+    5. Phase2BlueDwarf2.png
+    6. Phase2BlueDwarf3.png
+    7. RedDwarf1.png
+    8. RedDwarf2.png
+    9. RedDwarf3.png
+    10. Title.png
+    11. Whiteprincess.png
+
 I made these with Pixel Studio.
 
 Background Image : background.png
