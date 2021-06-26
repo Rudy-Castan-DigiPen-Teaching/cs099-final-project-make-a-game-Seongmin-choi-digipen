@@ -1,7 +1,7 @@
 Except for the background image, the other image are...
 =======================================================
  # BlueDwarf1.png
-BlueDwarf2.png
+ BlueDwarf2.png
  BlueDwarf3.png
  Phase2BlueDwarf1.png
  Phase2BlueDwarf2.png
