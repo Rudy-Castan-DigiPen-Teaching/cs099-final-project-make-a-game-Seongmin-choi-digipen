@@ -1,5 +1,5 @@
-1. Shapes - {O}
-===============
+1. Shapes
+=========
 There are some Example what I used
     - circle
         Dwarf Particle
@@ -12,8 +12,8 @@ There are some Example what I used
         How to play Box
         Credit Box
 
-2. Colors - {O}
-===============
+2. Colors
+=========
 There are some Example what I used
     -Dwarf Particle
         R   G   B
