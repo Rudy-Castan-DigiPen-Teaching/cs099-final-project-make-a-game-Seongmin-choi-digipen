@@ -33,3 +33,7 @@ phase2 pattern
 --------------
 ![Alt text](/asset/prototype/Phase2Pattern.png)
 
+fix phase2 pattern
+--------------
+![Alt text](/asset/prototype/Phase2Pattern1.png)
+
