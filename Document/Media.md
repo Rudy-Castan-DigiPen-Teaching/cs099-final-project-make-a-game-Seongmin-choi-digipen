@@ -14,6 +14,16 @@ Except for the background image, the other image are...
 
 I made these with *Pixel Studio for pixel art*.
 
+prototype
+---------
+    **1. prototype1.jpg**
+    **2. prototype2.jpg**
+    **3. Phase1Pattern.png**
+    **4. Phase2Pattern.png**
+    **5. Phase2Pattern1.png**
+
+I made these with *MSPaint*
+
 Got Music, Background Image from
 ================================
     Background Image : background.png    
