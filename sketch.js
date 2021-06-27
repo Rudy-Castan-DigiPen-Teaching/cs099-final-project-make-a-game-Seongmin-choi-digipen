@@ -11,7 +11,6 @@ let blueDwarf;
 let blueDwarfImg = [];
 let dwarfPhase;
 let dwarfPhaseImg = [];
-let center;
 let snowImg = [];
 let snowprincess;
 let appleImg = [];
@@ -92,7 +91,6 @@ function draw()
             check = 0;
         }
         break;
-        //크레딧
     case 1:
         check = 1;
         push()
@@ -114,7 +112,6 @@ function draw()
         text( "[If you want to back, you need to press F5]", 100, 540 );
         pop()
         break;
-        //게임 시작
     case 2:
         push()
         fill( 220 );
@@ -140,7 +137,6 @@ function draw()
         text( "[Press mouse to start.]", 200, 540 );
         pop()
         break;
-        //게임 스토리 3~5
     case 3:
         mainMusic.pause();
         check = 1;
@@ -275,7 +271,6 @@ function draw()
         snowprincess.update();
         snowprincess.draw( snowImg[ 0 ] );
         
-        //dwarfHp bar
         push()
         fill( 0 );
         rect( 100, 50, 400, 10 );

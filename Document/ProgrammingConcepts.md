@@ -1,18 +1,20 @@
 1 Shapes
 ========
+Shapes is used to draw shapes.
+------------------------------
 I used Shapes such as circle, rect. There are some Example what I used
 ----------------------------------------------------------------------
     - circle
-        Dwarf Particle
-        SnowWhite Particle
-        Dwarf Hitbox
-        SnowWhite Hitbox
+        Dwarf Particle       ex)circle( this.position.x, this.position.y, this.hitBoxR = 15 );
+        SnowWhite Particle   ex)circle( this.position.x, this.position.y, this.hitBoxR = 15 );
+        Dwarf Hitbox         ex)circle( this.position.x + 40, this.position.y + 35, this.hitBoxR = 40 );
+        SnowWhite Hitbox     ex)circle( this.position.x, this.position.y, this.hitBoxR = 20 );
 
     - rect
-        Select Button
-        How to play Box
-        Credit Box
-        Game Over Box
+        Select Button        ex)rect( width / 2 - 150, height / 2 + 105, 300, 50 );
+        How to play Box      ex)rect( 0, 50, 600, height - 100, 20 );
+        Credit Box           ex)rect( 0, 50, 600, height - 100, 20 );
+        Game Over Box        ex)rect( 0, height / 2 - 50, 600, 100 );
 
 2 Colors
 ========
@@ -39,8 +41,30 @@ There are some Example what I used
 I put a lot of values in variables. There are some Example what I used
 ----------------------------------------------------------------------
 ### Load asset
-    - Image
-        
+- Image
+
+    -Character 
+        let redDwarf;
+        let redDwarfImg = [];
+        let blueDwarf;
+        let blueDwarfImg = [];
+        let dwarfPhase;
+        let dwarfPhaseImg = [];
+        let snowImg = [];
+        let snowprincess;
+        let appleImg = [];
+        let titleImg = [];
+    
+    -Background
+        let BackGround = [];
+
+    -Title
+        let title;
+
+- Sound
+
+    -Background
+
 4 Conditional Statements
 ========================
 I used Shapes such as circle, rect. There are some Example what I used
