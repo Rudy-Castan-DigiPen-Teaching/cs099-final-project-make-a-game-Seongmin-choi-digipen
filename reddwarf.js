@@ -3,7 +3,7 @@
 // Course     : CS099
 // Spring 2021
 
-class dwarf
+class Reddwarf
 {
     constructor( x, y, imageAnimate )
     {

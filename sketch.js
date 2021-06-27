@@ -51,7 +51,7 @@ function preload()
 function setup()
 {
     createCanvas( 600, windowHeight );
-    redDwarf = new dwarf( width / 2, 150, redDwarfImg );
+    redDwarf = new Reddwarf( width / 2, 150, redDwarfImg );
     blueDwarf = new Bluedwarf( width / 2 - 80, 150, blueDwarfImg );
     snowprincess = new snowPrincess( width / 2, height - 100, snowImg );
     dwarfPhase = new dwarfPhase2( width / 2 - 80, 150, dwarfPhaseImg );
