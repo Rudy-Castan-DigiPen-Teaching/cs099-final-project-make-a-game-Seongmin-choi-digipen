@@ -135,8 +135,11 @@ so that it doesn't flip to the next screen.
         
 5 Loops
 =======
-I used Shapes such as circle, rect. There are some Example what I used
-----------------------------------------------------------------------
+A loop statement is an instruction to repeat within the range I set. So, in the end, the code that is outside the range I set does not run repeatedly. There are some Example What I 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+used
+----
+
 Hitbox judgment using a for statement - {sketch.js 163 ~ 258}
         
         for ( let i = 0; i < snowprincess.Shoot.length; i++ )
@@ -157,7 +160,6 @@ Hitbox judgment using a for statement - {sketch.js 163 ~ 258}
 Both the hitbox and the particle were made into circles, 
 making the hitbox is true value when the added value between radius was greater than the distance value between the two centers.
 
-
 A continuously functioning Dwarf ammunition using a for statement - {bluedwarf.js 93 ~ 116}
         
         for ( let i = 0; i < this.particle.length; i++ )
@@ -171,23 +173,18 @@ A continuously functioning Dwarf ammunition using a for statement - {bluedwarf.j
             }
         }
 
-
-
 6 Functions
 ===========
-I used Shapes such as circle, rect. There are some Example what I used
-----------------------------------------------------------------------
-    - circle
-        Dwarf Particle
-        SnowWhite Particle
-        Dwarf Hitbox
-        SnowWhite Hitbox
+Function can easily reduce code to write longer and harder, and add parameters to function.
+-------------------------------------------------------------------------------------------
 
-    - rect
-        Select Button
-        How to play Box
-        Credit Box
-        Game Over Box
+    draw( image_reference ) - {Title.js 20 ~ 26}
+    {
+        push();
+        imageMode( CENTER );
+        image( image_reference, this.position.x, this.position.y );
+        pop();
+    } 
 
 7 Classes
 =========
