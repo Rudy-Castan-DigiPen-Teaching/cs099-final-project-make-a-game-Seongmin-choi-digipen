@@ -13,7 +13,6 @@ let dwarfPhase;
 let dwarfPhaseImg = [];
 let snowImg = [];
 let snowprincess;
-let appleImg = [];
 let titleImg = [];
 let title;
 let mainMusic;
@@ -55,7 +54,6 @@ function setup()
     snowprincess = new snowPrincess( width / 2, height - 100, snowImg );
     dwarfPhase = new dwarfPhase2( width / 2 - 80, 150, dwarfPhaseImg );
     title = new Title( width / 2, 200, titleImg );
-    apple = new Title( snowprincess.position.x, snowprincess.position.y, appleImg );
     screen = 0;
     fontDeltaTime += deltaTime / 1000;
 }
