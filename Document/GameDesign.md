@@ -21,3 +21,7 @@ Mock Ups
 Prototype
 ---------
 ![Alt text](/asset/prototype/prototype1.jpg)
+
+fix Prototype
+-------------
+![Alt text](/asset/prototype/prototype2.jpg)
