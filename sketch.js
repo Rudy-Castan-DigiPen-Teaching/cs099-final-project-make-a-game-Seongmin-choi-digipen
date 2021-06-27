@@ -149,7 +149,7 @@ function draw()
         blueDwarf.particleDraw();
         snowprincess.update();
         snowprincess.draw( snowImg[ 0 ] );
-        
+
         push()
         fill( 0 );
         rect( 100, 50, 400, 10 );
@@ -267,7 +267,7 @@ function draw()
         dwarfPhase.particleDraw();
         snowprincess.update();
         snowprincess.draw( snowImg[ 0 ] );
-        
+
         push()
         fill( 0 );
         rect( 100, 50, 400, 10 );
