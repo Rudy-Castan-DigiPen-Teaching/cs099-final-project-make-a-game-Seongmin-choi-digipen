@@ -22,18 +22,39 @@ Prototype
 ---------
 ![Alt text](/asset/prototype/prototype1.jpg)
 
+    The Dongbang Project and the 1942 style of the Bullet Shooter Game were first conceived in the prototype.
+
 fix Prototype
 -------------
 ![Alt text](/asset/prototype/prototype2.jpg)
 
 phase1 pattern
 --------------
+![Alt text](/asset/prototype/Phase1Pattern.png)
 
+    There will be two bosses in total, and the blue dwarf is the real thing, 
+    so we set the heat box only for the blue dwarf.
 phase2 pattern
 --------------
 ![Alt text](/asset/prototype/Phase2Pattern.png)
 
+    The four patterns will be random, 
+    and the physical strength will be lower than the one-page boss.
+
 fix phase2 pattern
 --------------
 ![Alt text](/asset/prototype/Phase2Pattern1.png)
+FiX POINT
+
+    four patterns -> three patterns
+    third pattern have more bullets (5 -> 9) 
+
+Game Play
+---------
+
+    Move : Up, Down, Left, Right arrow keys
+    Shoot : Space Bar
+
+    
+
 
