@@ -137,17 +137,41 @@ so that it doesn't flip to the next screen.
 =======
 I used Shapes such as circle, rect. There are some Example what I used
 ----------------------------------------------------------------------
-    - circle
-        Dwarf Particle
-        SnowWhite Particle
-        Dwarf Hitbox
-        SnowWhite Hitbox
+Hitbox judgment using a for statement - {sketch.js 163 ~ 258}
+        
+        for ( let i = 0; i < snowprincess.Shoot.length; i++ )
+            {
+            let d = dist( snowprincess.Shoot[ i ].position.x, snowprincess.Shoot[ i ].position.y, blueDwarf.position.x +
+                40, blueDwarf.position.y + 35 );
 
-    - rect
-        Select Button
-        How to play Box
-        Credit Box
-        Game Over Box
+            if ( d <= snowprincess.Shoot[ i ].hitBoxR + blueDwarf.hitBoxR )
+            {
+                snowprincess.Shoot[ i ].isHit = true;
+                blueDwarf.isHit = true;
+                if ( snowprincess.Shoot[ i ].isHit == true && blueDwarf.isHit == true )
+                {
+                    snowprincess.Shoot.splice( i, 1 );
+                    blueDwarf.dwarfHp = blueDwarf.dwarfHp - 2;
+                }
+            }
+Both the hitbox and the particle were made into circles, 
+making the hitbox is true value when the added value between radius was greater than the distance value between the two centers.
+
+
+A continuously functioning Dwarf ammunition using a for statement - {bluedwarf.js 93 ~ 116}
+        
+        for ( let i = 0; i < this.particle.length; i++ )
+        {
+            this.particle[ i ].update();
+            this.particle[ i ].draw();
+
+            if ( this.particle[ i ].position.y > height )
+            {
+                this.particle.splice( i, 1 );
+            }
+        }
+
+
 
 6 Functions
 ===========
