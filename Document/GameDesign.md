@@ -25,3 +25,11 @@ Prototype
 fix Prototype
 -------------
 ![Alt text](/asset/prototype/prototype2.jpg)
+
+phase1 pattern
+--------------
+
+phase2 pattern
+--------------
+![Alt text](/asset/prototype/Phase2Pattern.png)
+
