@@ -150,7 +150,6 @@ function draw()
         snowprincess.update();
         snowprincess.draw( snowImg[ 0 ] );
         
-        //dwarfHp bar
         push()
         fill( 0 );
         rect( 100, 50, 400, 10 );
